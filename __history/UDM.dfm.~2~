@@ -1,0 +1,17 @@
+object DataModule2: TDataModule2
+  Height = 233
+  Width = 439
+  object Conexao: TFDConnection
+    Left = 80
+    Top = 96
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    Left = 168
+    Top = 152
+  end
+  object qrCliente: TFDQuery
+    Connection = Conexao
+    Left = 272
+    Top = 144
+  end
+end

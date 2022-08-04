@@ -1,0 +1,24 @@
+unit frmDeletaClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmDeletarClientes = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmDeletarClientes: TfrmDeletarClientes;
+
+implementation
+
+{$R *.dfm}
+
+end.

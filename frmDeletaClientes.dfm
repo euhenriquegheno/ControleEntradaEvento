@@ -1,0 +1,38 @@
+object frmDeletarClientes: TfrmDeletarClientes
+  Left = 0
+  Top = 0
+  Caption = 'Deletar clientes'
+  ClientHeight = 95
+  ClientWidth = 282
+  Color = clBtnFace
+  CustomTitleBar.CaptionAlignment = taCenter
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object Label11: TLabel
+    Left = 24
+    Top = 16
+    Width = 234
+    Height = 17
+    Caption = 'Deletar todos os clientes cadastrados.'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object btnDeletarClientes: TButton
+    Left = 88
+    Top = 39
+    Width = 105
+    Height = 41
+    Caption = 'Deletar'
+    TabOrder = 0
+    OnClick = btnDeletarClientesClick
+  end
+end
