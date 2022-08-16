@@ -6,6 +6,7 @@ object dm: Tdm
     Params.Strings = (
       'User_Name=SYSDBA'
       'Password=masterkey'
+      'Protocol=TCPIP'
       'DriverID=FB')
     LoginPrompt = False
     Left = 40

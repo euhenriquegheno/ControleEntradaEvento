@@ -56,6 +56,7 @@ type
     rgOrdenacao: TRadioGroup;
     MainMenu1: TMainMenu;
     Utilitario1: TMenuItem;
+    lbRegistros: TLabel;
     procedure pcPrincipalChange(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
@@ -221,7 +222,7 @@ begin
   if (gdRowSelected in State) or (gdSelected in State) then
   begin
     (Sender as TDBGrid).Canvas.Brush.Style := bsSolid;
-    (Sender as TDBGrid).Canvas.Brush.Color := clskyblue;
+    (Sender as TDBGrid).Canvas.Brush.Color := cl3DLight;
     (Sender as TDBGrid).Canvas.Font.Style := [fsbold];
     (Sender as TDBGrid).Canvas.FillRect(Rect);
     (Sender as TDBGrid).Canvas.Font.Color := clHotLight;
@@ -239,12 +240,14 @@ begin
 
   if (Sender as TDBGrid).DataSource.DataSet.FieldByName('STATUS').Value = 'ENTROU'   then
   begin
-    (Sender as TDBGrid).Canvas.Font.Color := clGreen;
+    (Sender as TDBGrid).Canvas.Font.Color := clWhite;
     (Sender as TDBGrid).Canvas.Font.Style:= [fsbold];
+    (Sender as TDBGrid).Canvas.Brush.Style := bsSolid;
+    (Sender as TDBGrid).Canvas.Brush.Color := clGreen;
   end
   else
   begin
-    (Sender as TDBGrid).Canvas.Font.Color := clHotLight;
+    (Sender as TDBGrid).Canvas.Font.Color := clRed;
     (Sender as TDBGrid).Canvas.Font.Style:= [fsbold];
   end;
 
@@ -278,7 +281,7 @@ procedure TForm1.FormShow(Sender: TObject);
 begin
   pcPrincipal.ActivePage := tsConsulta;
 
-  dm.qrCliente.Open;
+  listarCliente;
 end;
 
 procedure TForm1.listarCliente;
@@ -288,7 +291,7 @@ begin
   dm.qrCliente.SQL.Add('where 1 = 1');
 
   if edtNome.Text <> '' then
-    dm.qrCliente.SQL.Add(' and (nome like ' + QuotedStr('%' + edtNome.Text + '%') + ')');
+    dm.qrCliente.SQL.Add(' and (nome like ' + UpperCase(QuotedStr('%' + edtNome.Text + '%') + ')'));
 
   if edtCpfRg.Text <> '' then
     dm.qrCliente.SQL.Add(' and (cpf_rg = ' + QuotedStr(edtCpfRg.Text) + ')');
@@ -309,6 +312,9 @@ begin
     dm.qrCliente.SQL.Add(' order by status');
 
   dm.qrCliente.Open;
+  dm.qrCliente.FetchAll;
+
+  lbRegistros.Caption := 'Registros ' + intToStr(dm.qrCliente.RecordCount);
 
 end;
 

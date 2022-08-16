@@ -25,8 +25,6 @@ object Form1: TForm1
     Align = alClient
     TabOrder = 0
     OnChange = pcPrincipalChange
-    ExplicitLeft = 8
-    ExplicitTop = 16
     object tsConsulta: TTabSheet
       Caption = 'Consulta'
       object DBGrid1: TDBGrid
@@ -95,8 +93,6 @@ object Form1: TForm1
         Color = clWhite
         ParentBackground = False
         TabOrder = 1
-        ExplicitTop = -3
-        ExplicitWidth = 1044
         object btnCadastrar: TButton
           AlignWithMargins = True
           Left = 1052
@@ -111,9 +107,6 @@ object Form1: TForm1
           Caption = 'Cadastrar | F2'
           TabOrder = 0
           OnClick = btnCadastrarClick
-          ExplicitLeft = 938
-          ExplicitTop = 11
-          ExplicitHeight = 40
         end
         object btnAlterar: TButton
           AlignWithMargins = True
@@ -129,9 +122,6 @@ object Form1: TForm1
           Caption = 'Alterar | F3'
           TabOrder = 1
           OnClick = btnAlterarClick
-          ExplicitLeft = 839
-          ExplicitTop = 11
-          ExplicitHeight = 40
         end
         object btnExcluir: TButton
           AlignWithMargins = True
@@ -147,9 +137,6 @@ object Form1: TForm1
           Caption = 'Excluir | F4'
           TabOrder = 2
           OnClick = btnExcluirClick
-          ExplicitLeft = 740
-          ExplicitTop = 11
-          ExplicitHeight = 40
         end
         object btnConfCancEntrada: TButton
           AlignWithMargins = True
@@ -165,7 +152,6 @@ object Form1: TForm1
           Caption = 'Confirmar/Cancelar Entrada'
           TabOrder = 3
           OnClick = btnConfCancEntradaClick
-          ExplicitLeft = 10
         end
       end
       object Panel2: TPanel
@@ -178,7 +164,6 @@ object Form1: TForm1
         Color = clWhite
         ParentBackground = False
         TabOrder = 2
-        ExplicitTop = 61
         object Label1: TLabel
           Left = 16
           Top = 22
@@ -239,6 +224,26 @@ object Form1: TForm1
           ParentColor = False
           ParentFont = False
         end
+        object lbRegistros: TLabel
+          AlignWithMargins = True
+          Left = 3
+          Top = 433
+          Width = 275
+          Height = 17
+          Align = alBottom
+          Alignment = taCenter
+          Caption = 'Registros...'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Layout = tlCenter
+          ExplicitLeft = 87
+          ExplicitTop = 435
+          ExplicitWidth = 188
+        end
         object edtNome: TEdit
           Left = 16
           Top = 45
@@ -267,7 +272,7 @@ object Form1: TForm1
         object btnBuscar: TButton
           AlignWithMargins = True
           Left = 80
-          Top = 393
+          Top = 370
           Width = 121
           Height = 50
           Margins.Left = 80
@@ -278,9 +283,7 @@ object Form1: TForm1
           Caption = 'Buscar'
           TabOrder = 5
           OnClick = btnBuscarClick
-          ExplicitLeft = 83
-          ExplicitTop = 351
-          ExplicitWidth = 142
+          ExplicitTop = 393
         end
         object cbStatus: TComboBox
           Left = 16
@@ -394,6 +397,7 @@ object Form1: TForm1
         Top = 112
         Width = 500
         Height = 23
+        CharCase = ecUpperCase
         DataField = 'NOME'
         DataSource = dsCliente
         TabOrder = 0
@@ -430,6 +434,7 @@ object Form1: TForm1
         Top = 261
         Width = 145
         Height = 23
+        CharCase = ecUpperCase
         DataField = 'SETOR'
         DataSource = dsCliente
         Items.Strings = (
@@ -447,8 +452,6 @@ object Form1: TForm1
         Height = 51
         Align = alBottom
         TabOrder = 5
-        ExplicitTop = 432
-        ExplicitWidth = 1044
         object btnCancelar: TButton
           AlignWithMargins = True
           Left = 957
@@ -463,9 +466,6 @@ object Form1: TForm1
           Caption = 'Cancelar | Esc'
           TabOrder = 0
           OnClick = btnCancelarClick
-          ExplicitLeft = 797
-          ExplicitTop = 3
-          ExplicitHeight = 29
         end
         object btnGravar: TButton
           AlignWithMargins = True
@@ -481,9 +481,6 @@ object Form1: TForm1
           Caption = 'Gravar | F5'
           TabOrder = 1
           OnClick = btnGravarClick
-          ExplicitLeft = 853
-          ExplicitTop = 19
-          ExplicitHeight = 29
         end
       end
     end

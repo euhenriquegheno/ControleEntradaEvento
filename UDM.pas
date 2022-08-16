@@ -41,23 +41,47 @@ implementation
 
 procedure Tdm.DataModuleCreate(Sender: TObject);
 var
-  caminhoTXT, caminhoBD : String;
+  caminhoTXT, caminhoBD, database, username, password, server: String;
+  ArqIni : TIniFile;
 begin
   //PEGA O CAMINHO EM QUE O PROGRAMA ESTA CONFIGURADO
   caminhoTXT := ExtractFilePath(Application.ExeName);
   caminhoTXT := caminhoTXT + 'banco\database.txt';
 
   //COMANDO PARA VERIFICAR SE EXISTE O ARQUIVO NA PASTA
-  if (FileExists (CaminhoTXT)) then
-    caminhoBD := Arquivo_Ler(caminhoTXT)
-  Else
-  Begin
-    Arquivo_Escrever(caminhoTXT, ' ');
+  if (FileExists(CaminhoTXT)) then
+  begin
+    ArqIni := TIniFile.Create(caminhoTXT);
+    try
+      database := ArqIni.ReadString('Dados', 'database', database);
+      username := ArqIni.ReadString('Dados', 'username', username);
+      password := ArqIni.ReadString('Dados', 'password', password);
+      server := ArqIni.ReadString('Dados', 'server', server);
+
+    finally
+      ArqIni.Free;
+    end;
+  end
+  else
+  begin
+    ArqIni := TIniFile.Create(caminhoTXT);
+    try
+      ArqIni.WriteString('Dados', 'database', 'C:\ControleEntrada\Exe\Banco\BANCO.FDB');
+      ArqIni.WriteString('Dados', 'username', 'SYSDBA');
+      ArqIni.WriteString('Dados', 'password', 'masterkey');
+      ArqIni.WriteString('Dados', 'server', 'localhost');
+
+    finally
+      ArqIni.Free;
+    end;
     Application.Terminate;
-  End;
+  end;
 
   Try
-    conexao.Params.Values['DataBase'] := Trim(caminhoBD);
+    conexao.Params.Values['DataBase'] := database;
+    conexao.Params.Values['User_name'] := username;
+    conexao.Params.Values['Password'] := password;
+    conexao.Params.Values['Server'] := server;
 
     conexao.Open;
     conexao.Connected := True

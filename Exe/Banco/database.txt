@@ -1,1 +1,5 @@
-C:\Github\ControleEntrada\Exe\Banco\banco.fdb
+[Dados]
+database=C:\Github\ControleEntrada\Exe\Banco\BANCO.FDB
+username=SYSDBA
+password=masterkey
+server=localhost
