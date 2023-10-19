@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4B67C343-6855-47C1-8524-31656B237C8F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ControleEntradaEvento.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ControleEntradaEvento">
+        <MSBuild Projects="ControleEntradaEvento.dproj"/>
+    </Target>
+    <Target Name="ControleEntradaEvento:Clean">
+        <MSBuild Projects="ControleEntradaEvento.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ControleEntradaEvento:Make">
+        <MSBuild Projects="ControleEntradaEvento.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ControleEntradaEvento"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ControleEntradaEvento:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ControleEntradaEvento:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

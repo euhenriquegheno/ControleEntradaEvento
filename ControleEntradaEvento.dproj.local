@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/06/21 17:11:55.000.496,=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/21 17:19:48.000.090,=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/21 17:50:21.000.362,=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/03 20:01:24.000.811,=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/03 20:02:55.000.427,=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/08/03 20:03:20.000.663,C:\Github\ControleEntrada\frmPrincipal.dfm=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/08/03 20:03:20.000.663,C:\Github\ControleEntrada\frmPrincipal.pas=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/03 20:03:29.000.866,C:\Github\ControleEntrada\UDM.pas=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/08/03 20:03:29.000.866,C:\Github\ControleEntrada\UDM.dfm=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/08/03 20:03:37.000.555,C:\Github\ControleEntrada\ControleEntrada.dproj=C:\Users\henrique\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/08/03 20:31:59.000.291,=C:\Github\ControleEntrada\Unit\EFuncoes.pas</Transaction>
+    <Transaction>2022/08/03 22:20:40.000.174,=C:\Github\ControleEntrada\Unit2.pas</Transaction>
+    <Transaction>2022/08/03 22:21:16.000.642,C:\Github\ControleEntrada\frmDeletaClientes.dfm=C:\Github\ControleEntrada\Unit2.dfm</Transaction>
+    <Transaction>2022/08/03 22:21:16.000.642,C:\Github\ControleEntrada\frmDeletaClientes.pas=C:\Github\ControleEntrada\Unit2.pas</Transaction>
+    <Transaction>2023/10/19 10:23:47.573,C:\Github\ControleEntrada\ControleEntradaEvento.dproj=C:\Github\ControleEntrada\ControleEntrada.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
